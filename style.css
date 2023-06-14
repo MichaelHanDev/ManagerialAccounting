@@ -1,137 +1,106 @@
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-}
-
-html,
-body {
+  }
+  
+  html, body {
     height: 100%;
     width: 100vw;
     overflow: hidden;
     background-color: #161616;
-    cursor: none;
-}
-/*cursor definitions*/
-.cursor-dot {
-    width: 10px;
-    height: 10px;
-    background-color: white;
-}
-
-.cursor-outline {
-    width: 30px;
-    height: 30px;
-    border: 3px dotted hsl(0, 0%, 50%, 0.5);
-}
-
-.cursor-dot, 
-.cursor-outline {
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translate(-50%,-50%);
-    border-radius: 50%;
-    z-index: 1;
-    pointer-events: none;
-}
-/*cursor animation*/
-.cursor {
-    position: absolute;
-    transform: translate(-50%,-50%) scale(0);
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    border: 2px solid #00e1ff;
-    animation: scale-up .6s;
-}
-
-@keyframes scale-up {
-    0% {
-        transform: translate(-50%,-50%) scale(0);
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: translate(-50%,-50%) scale(1);
-        opacity: 0;
-    }
-}
-
-/*intro definitions*/
-.intro {
-    /* Fixed positioning to cover the entire viewport */
+    cursor: none !important;
+  }
+  
+  /* Intro Splash Page */
+  .intro {
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100vh;
-    /* Background color */
     background-color: #1f1f1f;
-    /* Transition effect */
     transition: 1s;
-}
-
-.logo-header {
-    /* Absolute positioning for logo header */
+  }
+  
+  .logo-header {
     position: absolute;
     top: 40%;
     left: 50%;
-    /* Center the logo horizontally and vertically */
     transform: translate(-50%,-50%);
-    /* Text color */
     color: #ffffff;
     font-size: 40px;
-}
-
-.logo {
-    /* Relative positioning for logo */
+  }
+  
+  .logo {
     position: relative;
     display: inline-block;
     bottom: -20px;
     opacity: 0;
-    /* Text color */
     color: white;
-}
-
-.logo.active {
-    /* Animation when logo becomes active */
+  }
+  
+  .logo.active {
     bottom: 0;
     opacity: 1;
-    /* Transition effect */
     transition: ease-in-out 0.5s;
-}
-
-.logo.fade {
-    /* Animation when logo fades */
+  }
+  
+  .logo.fade {
     bottom: 150px;
     opacity: 0;
-    /* Transition effect */
     transition: ease-in-out 0.5s;
-}
-
-.logo.different-color {
+  }
+  
+  .logo.different-color {
     color: #00b3ff;
-}  
-.menu {
+  }
+  
+  /* Custom Cursor */
+  .cursor-dot {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+  }
+  
+  .cursor-outline {
+    width: 30px;
+    height: 30px;
+    border: 3px dotted hsl(0, 0%, 50%, 0.5);
+  }
+  
+  .cursor-dot, .cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  /* Navigation Menu */
+  .menu {
     position: relative;
     height: 100%;
     width: 100%;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-}
-
-.menu-item {
+  }
+  
+  .menu-item {
     position: relative;
     height: 20%;
-    pointer-events: none;
-}
+  }
+  
+  .menu-item-inner {
+    cursor: none;
+  }
 
-a {
+  a {
     font-size: 30px;
     position: absolute;
     top: 50%;
@@ -140,20 +109,46 @@ a {
     color: white;
     text-decoration: none;
     letter-spacing: 2px;
-}
-
-a:hover {
-    opacity: 0.6;
-}
-
-/*particle definitions*/
-#particles-js{
-position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #161616;
-  background-image: url("");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-}
+  }
+  
+  .menu-item-inner:hover {
+    opacity: 0.6 !important;
+    transition: opacity 0.3s ease;
+  }
+  
+  .cursor {
+    position: absolute;
+    transform: translate(-50%,-50%) scale(0);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid #00e1ff;
+    animation: scale-up .6s;
+  }
+  
+  @keyframes scale-up {
+    0% {
+      transform: translate(-50%,-50%) scale(0);
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%,-50%) scale(1);
+      opacity: 0;
+    }
+  }
+  
+  /* Particles */
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #161616;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  

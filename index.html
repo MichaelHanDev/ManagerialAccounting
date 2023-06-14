@@ -2,73 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="style.css"> <!-- External CSS file -->
-    <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconnect to Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconnect to Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"> <!-- Importing the Poppins font -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Intro Splash Page -->
     <div class="intro">
         <h1 class="logo-header">
-            <span class="logo">Managerial</span> <span class="logo different-color">Accounting</span>
+            <span class="logo">Managerial</span>
+            <span class="logo different-color">Accounting</span>
         </h1>
     </div>
-    <!-- Custom Cursor -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
     
     <!-- Particles -->
     <div id="particles-js"></div>
 
-    <!-- stats - count particles -->
-<div class="count-particles">
-    <span class="js-count-particles">--</span> particles
-  </div>
+    <!-- Stats - Count particles -->
+    <div class="count-particles">
+        <span class="js-count-particles">--</span> particles
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
 
     <!-- Navigation menu -->
     <nav class="menu">
         <div class="menu-item">
-            <a href="" class="menu-item-inner">
-                Chapter Breakdowns
-            </a>
+            <a href="/chapters/chapters.html" class="menu-item-inner">Chapter Breakdowns</a>
         </div>
         <div class="menu-item">
-            <a href="" class="menu-item-inner">
-                Comprehensive Calculator
-            </a>
+            <a href="" class="menu-item-inner">Comprehensive Calculator</a>
         </div>
         <div class="menu-item">
-            <a href="" class="menu-item-inner">
-                Final Project
-            </a>
+            <a href="" class="menu-item-inner">Final Project</a>
         </div>
         <div class="menu-item">
-            <a href="" class="menu-item-inner">
-                Concept map
-            </a>
+            <a href="" class="menu-item-inner">Concept map</a>
         </div>
         <div class="menu-item">
-            <a href="" class="menu-item-inner">
-                Contact Information
-            </a>
+            <a href="" class="menu-item-inner">Contact Information</a>
         </div>
     </nav>
-    
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="particles.js"></script>
-<script>
-    particlesJS.load('particles-js', 'particles.json', function () {
-        console.log('particles.json loaded...');
-    });
-</script>
-<script src="app.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/particles.js/particles.min.js"></script>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function () {
+            console.log('particles.json loaded...');
+        });
+    </script>
 </body>
 </html>
