@@ -32,6 +32,51 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+//custom cursor effect 
+const cursorDot = document.querySelector(".cursor-dot");
+const cursorOutline = document.querySelector(".cursor-outline");
+
+window.addEventListener("mousemove", function (e) {
+    const posX = e.clientX;
+    const posY = e.clientY;
+
+    cursorDot.style.left = `${posX}px`;
+    cursorDot.style.top = `${posY}px`;
+
+    cursorOutline.style.left = `${posX}px`;
+    cursorOutline.style.top = `${posY}px`;
+
+    cursorOutline.animate(
+        {
+            left: `${posX}px`,
+            top: `${posY}px`,
+        },
+        { duration: 1000, fill: "forwards" }
+    );
+});
+
+// Cursor click effect
+const createCursor = (x, y) => {
+    const cursor = document.createElement("div");
+    cursor.className = "cursor";
+    cursor.style.left = `${x}px`;
+    cursor.style.top = `${y}px`;
+    return cursor;
+};
+
+const removeCursorFromDom = (cursor) => {
+    const timeout = setTimeout(() => {
+        cursor.remove();
+        clearTimeout(timeout);
+    }, 1000);
+};
+
+window.addEventListener("click", (event) => {
+    const cursor = createCursor(event.pageX, event.pageY);
+    document.body.append(cursor);
+    removeCursorFromDom(cursor);
+});
+
 // particles
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 particlesJS.load('particles-js', 'assets/particles.json', function() {
